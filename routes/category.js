@@ -5,14 +5,14 @@ const router = new express.Router();
 
 //add category
 
-router.post("/categories", categoryController.addCategory);
+router.post("/api/categories", categoryController.addCategory);
 
 //get category
 
-router.get("/categories", categoryController.getCategories);
+router.get("/api/categories", categoryController.getCategories);
 
 //get products from category
 
-router.get("/shop/:id", categoryController.categoryProducts);
+router.get("/api/shop/:id", categoryController.categoryProducts);
 
 module.exports = router;
