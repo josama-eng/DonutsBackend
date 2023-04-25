@@ -23,6 +23,9 @@ server.use(productsRoute);
 server.use(categoriesRoute);
 server.use(mailRoute);
 server.use(orderRoute);
+server.get("/", (req, res) => {
+  res.send("Server is working");
+});
 
 server.listen(port, (error) => {
   if (error) {
