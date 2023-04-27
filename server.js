@@ -12,7 +12,7 @@ require("./db/connect");
 mongoose.set("strictQuery", false);
 
 const server = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 server.use(cors());
 server.use(express.json());
@@ -27,7 +27,7 @@ server.get("/", (req, res) => {
   res.send("Server is working");
 });
 
-server.listen(3001, (error) => {
+server.listen(port, (error) => {
   if (error) {
     console.log(error);
   } else {
