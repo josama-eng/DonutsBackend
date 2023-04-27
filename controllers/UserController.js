@@ -19,7 +19,7 @@ async function registerUser(req, res) {
       newUser.save();
       //activate account
       const activationEmail = mailTemplate.htmlActivation(
-        `http://localhost:3000/user/activateAccount/${newUser?._id}`
+        `https://tubular-sundae-150fb1.netlify.app/user/activateAccount/${newUser?._id}`
       );
       mailService
         .activateMail(newUser.email, "Activation account", activationEmail)

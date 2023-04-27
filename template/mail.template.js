@@ -31,7 +31,7 @@ const htmlActivation = (activationLink) => {
 const htmlContactForm = (message, email) => {
   return `<h2 style="font-size: 20px; color: darkred;">Message from ${email}</h2>
     <p style="line-height: 1.7; color: blue">${message}</p>
-    <a href="http://localhost:3000" target="_blank">Go to WebSite</a>
+    <a href="https://tubular-sundae-150fb1.netlify.app/" target="_blank">Go to WebSite</a>
     <img src="cid:logo@nodemailer.com" style="height: 50px" alt="">`;
 };
 
