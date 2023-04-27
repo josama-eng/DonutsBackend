@@ -27,7 +27,7 @@ server.get("/", (req, res) => {
   res.send("Server is working");
 });
 
-server.listen(port, (error) => {
+server.listen(3001, (error) => {
   if (error) {
     console.log(error);
   } else {
