@@ -14,7 +14,12 @@ mongoose.set("strictQuery", false);
 const server = express();
 const PORT = process.env.PORT || 5000;
 
-server.use(cors());
+const corsOptions = {
+  origin: "https://tubular-sundae-150fb1.netlify.app/",
+  optionsSuccessStatus: 200,
+};
+
+server.use(cors(corsOptions));
 server.use(express.json());
 server.use("/public", express.static(path.join(__dirname, "public")));
 
