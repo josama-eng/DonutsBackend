@@ -9,6 +9,9 @@ const transporter = nodemailer.createTransport({
     user: MAIL_USER,
     pass: MAIL_PASS,
   },
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+  },
 });
 
 //for contact us
