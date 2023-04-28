@@ -5,6 +5,10 @@ const router = express.Router();
 const sendMail = require("../services/mail.service");
 const { htmlContactForm } = require("../template/mail.template");
 
+const server = express();
+server.use(cors());
+server.use(express.json());
+
 //contact us
 router.post("/api/mail/sendContact", async (req, res) => {
   const { email, subject, textarea } = req.body;
