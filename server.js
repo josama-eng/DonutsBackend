@@ -14,12 +14,7 @@ mongoose.set("strictQuery", false);
 const server = express();
 const PORT = process.env.PORT || 5000;
 
-const corsOptions = {
-  origin: "https://donuts.herokuapp.com/",
-  optionsSuccessStatus: 200,
-};
-
-server.use(cors(corsOptions));
+server.use(cors());
 server.use(express.json());
 server.use("/public", express.static(path.join(__dirname, "public")));
 
