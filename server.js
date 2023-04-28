@@ -15,7 +15,7 @@ const server = express();
 const PORT = process.env.PORT || 5000;
 
 const corsOptions = {
-  origin: "https://tubular-sundae-150fb1.netlify.app/",
+  origin: "https://donuts.herokuapp.com/",
   optionsSuccessStatus: 200,
 };
 
